@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes/landmarkRoutes");
+const userRoutes = require("./routes/userRoutes");
 require("dotenv").config();
 
 //first we create our app
@@ -21,8 +22,8 @@ app.use(express.json());
 
 //we use the routes we import from routes/landmarkRoutes.js
 app.use("/api/v1/landmarks", routes);
+app.use("/api/v1/users", userRoutes);
 //app.use("/api/v1/users", userRouter);
 
 //export app to use in server.js
 module.exports = app;
-

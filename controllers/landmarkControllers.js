@@ -1,4 +1,3 @@
-const fs = require("fs");
 const Landmark = require("../models/landmarkModel");
 
 exports.getAllLandmarks = async (req, res) => {
