@@ -8,9 +8,10 @@ require("dotenv").config();
 const app = express();
 
 // we connect to db-> has to be first thing we do
+console.log(process.env.DATABASE);
 mongoose
   .connect(
-    "mongodb+srv://tddimitra:l0Jtw2X5fW9IB873@cluster0.mh03ndg.mongodb.net/?retryWrites=true&w=majority",
+    `mongodb+srv://tddimitra:${process.env.DATABASE_PASSWORD}@cluster0.mh03ndg.mongodb.net/?retryWrites=true&w=majority`,
     {}
   )
   //then, catch=> try catch => study
